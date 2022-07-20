@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting started with javascript</title>
+</head>
+<body>
+    <script>
+        //01 Type of data variable 
+            //undefined, null, boolean, string, symbol, numbers, and objects
+
+        //02 To declare variable
+        
+            //for global scope we use
+            var num = 10;
+            //for local scope we use 
+            let n = 10;
+            //for keeping the value constant we use
+            const SUM = n + num;
+
+            let str = "HELLO";
+            //In context of declaration of string we can use 
+            //multiple type of enclosement such as '' "" ``
+
+        //03 Introducing strings
+
+            var name = "Lenovo"
+            
+            //console.log(name[1]);   //it will print 2nd letter of the string name
+
+            //strings in javascript are immutable
+            //which means their value can't be changed 
+
+            //like this here is not legal
+            name[1] = 's';
+
+            //but this is legal
+            name = "Asus";
+
+        //04 Introducing array
+        
+            var list = [['yo',1],['Hi',2],['Hello',3]];
+            //console.log(list[1][0]);
+
+            var sizeOfList = list.length;
+            //alert(sizeOfList);
+
+
+                //Array manipulation
+
+            list.push(['Hola',4]);
+            //console.log(list[list.length-1])
+            list.pop();
+            //console.log(list[list.length-1])
+
+            console.log(list[0]);
+            list.shift();   //TO remove first element of the array
+            console.log(list[0]);
+
+            list.unshift(['namaste',1]);
+            console.log(list[0]);
+
+            
+    </Script>
+</body>
+</html>
