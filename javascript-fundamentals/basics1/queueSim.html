@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue simulator</title>
+</head>
+<body>
+    <script>
+        //In queue new items are added in the first place
+        // and if items are being removed they will be from the last place
+
+        var arr = [1,2,3,4,5];
+        function nextInLine(num,item)
+        {
+            num.push(item);
+
+            return num.shift();
+        }
+        
+        console.log(JSON.stringify(arr));
+        console.log(nextInLine(arr,19));
+        console.log(JSON.stringify(arr));
+
+    </script>
+</body>
+</html>

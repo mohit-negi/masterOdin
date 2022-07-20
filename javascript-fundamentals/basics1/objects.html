@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to objects</title>
+</head>
+<body>
+    <script>
+        
+        function person1(num)
+        {
+            var result = "";    //setting it up as a string
+
+            var person = {
+            "Name" : "sappy",
+            "Income" : "nothing",
+            "Og" : "no",
+            "Stupid" : "no"
+            };
+
+            result = person[num];
+            return result;
+        }
+        console.log(person1("Income"));
+    </script>
+</body>
+</html>
