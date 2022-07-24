@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .highlight{
+            color: red; 
+            background-color: beige; 
+            font-size: 16px; 
+            padding: 10px; 
+            width: 250px; 
+            text-align: center;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="./images/dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+          const link = document.querySelector('a');
+
+          link.textcontent = 'Mozilla dev network';
+          link.href = 'https://www.google.com';
+
+          const sect = document.querySelector('section');
+          const para = document.querySelector('p');
+          para.textContent = 'we hope you enjoyed the ride';
+          
+          sect.appendChild(para);
+
+          const text = document.createTextNode(' -This is the text node ');
+
+          const linkpara = document.querySelector('p');
+          linkpara.appendChild(text);
+
+          //styling the DOM
+        /*
+          para.style.color = 'red';
+          para.style.backgroundColor = 'beige';
+          para.style.fontSize = '16px';
+          para.style.padding = '10px';
+          para.style.width = '250px';
+          para.style.textAlign = 'center';
+        */
+
+        para.setAttribute('class', 'highlight');
+      </script>
+  </body>
+</html>
+
+<!--
+    Adding text nodes to the DOM tree
+
+    1.Syntax for querySelector
+    
+    const identifier_name = document.querySelector('__Element/node to select__');
+
+    2.To add/append a child to the node 
+
+    node_identifier.appendChild('text' or identifier to append to node)
+    
+    ------------------------------------
+    > Adding styling using internal css instead of inline css
+
+    element.setAttribute('selection_method','class/id_identifier');
+
+    e.g, para.setAttribute('class','highlight');
+-->
